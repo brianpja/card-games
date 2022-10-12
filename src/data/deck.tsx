@@ -259,4 +259,4 @@ export const deck = [
     suit: 'hearts',
     value: 13
   },
-]
+];

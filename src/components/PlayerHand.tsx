@@ -1,7 +1,15 @@
 import React from 'react';
 import Card from './Card';
+import { ICard } from '../data/interfaces';
 
-const PlayerHand = () => {
+
+
+interface Props {
+  hand: Array<ICard>
+};
+
+const PlayerHand = ({ hand }: Props) => {
+  console.log('hand', hand);
   return (
     <div className="player-hand">
       <Card />
