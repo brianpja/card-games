@@ -5,15 +5,20 @@ import { ICard } from '../data/interfaces';
 
 
 interface Props {
-  hand: Array<ICard>
+  drawCard: React.MouseEventHandler<HTMLButtonElement>,
+  hand: Array<ICard>,
 };
 
-const PlayerHand = ({ hand }: Props) => {
+const PlayerHand = ({ drawCard, hand }: Props) => {
   console.log('hand', hand);
+
+  // need to map cards based on hand array
   return (
     <div className="player-hand">
       <Card />
       <Card />
+
+      <button onClick={drawCard}>Draw Card</button>
     </div>
   )
 };
