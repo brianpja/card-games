@@ -8,18 +8,18 @@ import { deck as newDeck } from './data/deck';
 
 function App() {
 
-  console.log('new deck', newDeck);
-
+  
   const [deck, setDeck] = useState<Array<ICard>>(newDeck);
   const [playerHand, setPlayerHand] = useState<Array<ICard>>([]);
-
+  
+  console.log('new deck', deck);
+  
   const drawCard = ():void => {
     console.log('firing draw card')
     const [ firstCard, ...restOfDeck ] = deck;
     setDeck(restOfDeck);
-    setPlayerHand( playerHand => [...playerHand, firstCard])
+    setPlayerHand( playerHand => [...playerHand, firstCard] );
   };
-
 
   return (
     <div className="App">

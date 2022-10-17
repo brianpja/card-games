@@ -15,8 +15,13 @@ const PlayerHand = ({ drawCard, hand }: Props) => {
   // need to map cards based on hand array
   return (
     <div className="player-hand">
-      <Card />
-      <Card />
+      {
+        hand.map(() => {
+          return (
+            <Card />
+          )
+        })
+      }
 
       <button onClick={drawCard}>Draw Card</button>
     </div>
