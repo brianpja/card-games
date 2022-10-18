@@ -16,9 +16,9 @@ const PlayerHand = ({ drawCard, hand }: Props) => {
   return (
     <div className="player-hand">
       {
-        hand.map(() => {
+        hand.map( (card:ICard) => {
           return (
-            <Card />
+            <Card suit={card.suit} value={card.value} />
           )
         })
       }

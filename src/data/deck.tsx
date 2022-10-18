@@ -131,7 +131,7 @@ export const deck = [
   },
   {
     number: 'ace',
-    suit: 'clubs',
+    suit: 'spades',
     value: 14
   },
   {
