@@ -40,8 +40,9 @@ const Card = ({ suit, value }: Props) => {
   }
 
   return (
-    <div className="card">
-      <span>{getFaceValue(value)} <FontAwesomeIcon icon={"getIconName(suit)"} /></span>
+    <div className={`card ${suit === 'hearts' || suit === 'diamonds' ? 'red': ''}`}>
+      <span>{getFaceValue(value)}</span>
+      <span>{suit}</span>
     </div>
   )
 };
